@@ -9,7 +9,6 @@ import { a2NotificationsService } from '../a2/a2-notifications'; // Import a2 se
 })
 export class AppComponent {
   title = 'a2-notification';
-  desc = 'Simple Angular2 component for show messaging';
 
   text = 'Enter You text.';
 

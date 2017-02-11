@@ -1,7 +1,8 @@
 # A2-notifications
 
-Simple Angular2 component for show messaging
+Simple Angular2 component for showing messages.
 
+[Demo:](https://avil13.github.io/a2-notifications/)
 
 Install package:
 ```bash
@@ -66,6 +67,6 @@ export class NameOfComponent {
 }
 ```
 
-You also can add time to show message in second parameter(ms).
+You can transfer display time with second parameter. (In ms)
 
-If your send not number in him, then auto close whill be turned off for this message.
+If you transfer not the number, then the message will not dissapear.
