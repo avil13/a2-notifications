@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 
 
 // Import a2 service and component
-import { a2NotificationsComponent, a2NotificationsService } from './../a2/a2-notifications';
+import { a2NotificationsComponent, a2NotificationsService } from './../a2';
 
 @NgModule({
   declarations: [
