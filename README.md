@@ -9,7 +9,7 @@ npm install --save a2-notifications
 ```
 
 Include:
-```typescrypt
+```javascrypt
 ...
 import { a2NotificationsComponent, a2NotificationsService } from 'a2-notifications';
 
@@ -37,7 +37,7 @@ In main HTML component add:
 
 
 And use them on your page:
-```typescrypt
+```javascrypt
 
 ...
 import { a2NotificationsService } from 'a2-notifications'; // Import a2 service
