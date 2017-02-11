@@ -68,4 +68,4 @@ export class NameOfComponent {
 
 You also can add time to show message in second parameter(ms).
 
-If your send not number in their, then auto close whill be turned off for this message.
+If your send not number in him, then auto close whill be turned off for this message.

@@ -21,6 +21,9 @@
     "message",
     "alert"
   ],
+  "repository": {
+    "git": "git@github.com:avil13/a2-notification.git"
+  },
   "devDependencies": {
     "@angular/common": "^2.3.1",
     "@angular/compiler": "^2.3.1",
