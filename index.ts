@@ -1,0 +1,1 @@
+import { a2NotificationsComponent, a2NotificationsService } from './src/a2/a2-notifications';

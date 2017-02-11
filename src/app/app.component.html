@@ -1,0 +1,52 @@
+<!-- Notification component -->
+<a2-notifications></a2-notifications>
+<!-- /Notification component -->
+
+<h1>
+    {{title}}
+</h1>
+
+<p>
+    {{ desc }}
+</p>
+
+<input type="text" [(ngModel)]="text">
+
+<hr>
+<button class="btn" (click)="add('info', null)">Info forever</button>
+<button class="btn" (click)="add('success', null)">Success forever</button>
+<button class="btn" (click)="add('error', null)">Error forever</button>
+<hr>
+<button class="btn" (click)="add('info')">Info</button>
+<button class="btn" (click)="add('success')">Success</button>
+<button class="btn" (click)="add('error')">Error</button>
+
+
+<hr>
+
+<p>
+    Install package:
+</p>
+<pre lg="console">{{ code_0}}</pre>
+
+<p>
+    Include:
+</p>
+<pre lg="typescript">{{ code_1 }}</pre>
+
+<p>
+    In main HTML component add:
+</p>
+<pre lg="html">{{ code_2 }}</pre>
+
+<p>
+    And use them on your page:
+</p>
+<pre lg="typescript">{{ code_3 }}</pre>
+
+<p>
+    You also can add time to show message in second parameter (ms).
+</p>
+<p>
+    If your send not number in their, then auto close whill be turned off for this message.
+</p>
