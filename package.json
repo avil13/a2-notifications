@@ -1,9 +1,9 @@
 {
   "name": "a2-notifications",
-  "version": "0.1.5",
+  "version": "0.1.7",
   "license": "MIT",
-  "main": "src/a2/lib/index.js",
-  "types": "src/a2/lib/index.d.ts",
+  "main": "./src/a2/lib/index.js",
+  "types": "./src/a2/lib/index.d.ts",
   "angular-cli": {},
   "scripts": {
     "ng": "ng",
