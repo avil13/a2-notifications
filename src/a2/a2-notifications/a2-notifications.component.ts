@@ -97,7 +97,7 @@ export class a2NotificationsComponent implements OnInit, OnDestroy {
         let message_block = {
             id: Date.now(),
             type: type,
-            text: txt
+            text: txt.toString()
         };
 
         this.mess.push(message_block);
