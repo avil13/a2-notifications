@@ -1,6 +1,6 @@
 {
   "name": "a2-notifications",
-  "version": "0.1.9",
+  "version": "0.1.11",
   "license": "MIT",
   "main": "./src/a2/lib/index.js",
   "types": "./src/a2/lib/index.d.ts",

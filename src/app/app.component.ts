@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { a2NotificationsService } from '../a2/a2-notifications'; // Import a2 service
+import { a2NotificationsService } from '../a2'; // Import a2 service
 
 @Component({
   selector: 'app-root',

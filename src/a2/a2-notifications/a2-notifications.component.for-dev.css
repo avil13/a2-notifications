@@ -111,3 +111,7 @@
     border-color: #ebccd1;
     background-color: #ea9394
 }
+
+.-mess.info .text{ color: #0b4967; }
+.-mess.success .text{ color: #1f4f2f; }
+.-mess.error .text{ color: #822926; }

@@ -23,40 +23,127 @@ export interface INotifyMessage {
     </div>
 </div>
     `,
+    // styleUrls: ['./a2-notifications.component.for-dev.css'],
+
     styles: [`
-.-block-fix { box-sizing: border-box; right: 0%; margin-right: 0.3rem; position: fixed; top: 0.4rem; z-index: 9000; width: 450px; max-width: 82%; }
+.-block-fix {
+    box-sizing: border-box;
+    right: 0%;
+    margin-right: 0.3rem;
+    position: fixed;
+    top: 0.4rem;
+    z-index: 9000;
+    width: 450px;
+    max-width: 82%;
+}
 
 @keyframes fadeindown {
-    from { opacity: 0; transform: translate3d(0, -100%, 0); }
-    to { opacity: 1; transform: none; }
+    from {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
 }
 
 @keyframes fadeoutup {
-    from { opacity: 1; }
-    to { opacity: 0; transform: translate3d(0, -100%, 0); }
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translate3d(0, -100%, 0);
+    }
 }
 
-.-mess { width: 100%; border: 1px solid #523; padding: 0.6rem; box-sizing: border-box; margin-bottom: 0.1rem; position: relative; border: 0.1px solid transparent; border-radius: 2px;  -webkit-box-shadow: 1px 3px 8px 1px rgba(3, 3, 3, .4); box-shadow: 1px 3px 8px 1px rgba(3, 3, 3, .4);  display: block;  animation-duration: .35s; animation-fill-mode: both;  animation-name: fadeindown; }
+.-mess {
+    width: 100%;
+    border: 1px solid #523;
+    padding: 0.6rem;
+    box-sizing: border-box;
+    margin-bottom: 0.1rem;
+    position: relative;
+    border: 0.1px solid transparent;
+    border-radius: 2px;
+    /**/
+    -webkit-box-shadow: 1px 3px 8px 1px rgba(3, 3, 3, .4);
+    box-shadow: 1px 3px 8px 1px rgba(3, 3, 3, .4);
+    /**/
+    display: block;
+    /**/
+    animation-duration: .35s;
+    animation-fill-mode: both;
+    /**/
+    animation-name: fadeindown;
+}
 
-.-mess.-out { animation-name: fadeoutup; }
+.-mess.-out {
+    animation-name: fadeoutup;
+}
 
-.-mess>.text { word-wrap: pre; }
+.-mess>.text {
+    word-wrap: pre;
+}
 
-.-mess>.-close { color: #222; text-shadow: 0 1px 0 #fff; font-size: 1.4rem; cursor: pointer; position: absolute; top: 0; right: .1rem; width: 1.4rem; height: 1.4rem; line-height: 1.4rem; text-align: center; opacity: .4; }
+
+/* close */
+
+.-mess>.-close {
+    color: #222;
+    text-shadow: 0 1px 0 #fff;
+    font-size: 1.4rem;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: .1rem;
+    width: 1.4rem;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    text-align: center;
+    opacity: .4;
+}
 
 .-mess>.-close :hover,
-.-mess>.-close :focus { opacity: 1; }
+.-mess>.-close :focus {
+    opacity: 1;
+}
 
-.-mess>.-close :active { opacity: .2; }
+.-mess>.-close :active {
+    opacity: .2;
+}
 
-.-mess>.-close :before { margin: 0; }
+.-mess>.-close :before {
+    margin: 0;
+}
 
 
-.-mess.info { color: #31708f; border-color: #bce8f1; background-color: #7bbbff; }
+/* types */
 
-.-mess.success { color: #1f4f2f; border-color: #d6e9c6; background-color: #73d987; }
+.-mess.info {
+    color: #31708f;
+    border-color: #bce8f1;
+    background-color: #7bbbff;
+}
 
-.-mess.error { color: #cc706d; border-color: #ebccd1; background-color: #ea9394 }
+.-mess.success {
+    color: #1f4f2f;
+    border-color: #d6e9c6;
+    background-color: #73d987;
+    /*background-color: #299d37;*/
+}
+
+.-mess.error {
+    color: #cc706d;
+    border-color: #ebccd1;
+    background-color: #ea9394
+}
+
+.-mess.info .text{ color: #0b4967; }
+.-mess.success .text{ color: #1f4f2f; }
+.-mess.error .text{ color: #822926; }
+
 `]
 })
 
@@ -94,10 +181,12 @@ export class a2NotificationsComponent implements OnInit, OnDestroy {
             return;
         }
 
+        let text = (typeof txt !== 'string') ? txt.statusText || txt.errorMessage || txt.toString() : txt;
+
         let message_block = {
             id: Date.now(),
             type: type,
-            text: txt.toString()
+            text: text
         };
 
         this.mess.push(message_block);
