@@ -41,7 +41,7 @@ var a2NotificationsComponent = (function () {
         var message_block = {
             id: Date.now(),
             type: type,
-            text: txt
+            text: txt.toString()
         };
         this.mess.push(message_block);
         if (typeof timeout === 'number' && timeout > 0) {
