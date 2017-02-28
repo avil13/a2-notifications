@@ -35,7 +35,7 @@ var a2NotificationsComponent = (function () {
             this.mess = [];
             return;
         }
-        if (!txt || typeof txt !== 'string') {
+        if (!txt) {
             return;
         }
         var message_block = {
