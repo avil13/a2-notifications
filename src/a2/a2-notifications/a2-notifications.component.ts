@@ -90,7 +90,7 @@ export class a2NotificationsComponent implements OnInit, OnDestroy {
             return;
         }
 
-        if (!txt || typeof txt !== 'string') {
+        if (!txt) {
             return;
         }
 
